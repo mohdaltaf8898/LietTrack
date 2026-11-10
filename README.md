@@ -104,3 +104,9 @@ The production build registers `service-worker.js`, which caches only a generic 
 Approved students can submit feedback from the student dashboard; administrators can review and respond from Feedback in the admin navigation. The `transport_feedback` migration is required. Feedback is not an emergency channel. Configure verified office and emergency contact information before relying on assistance features.
 
 The student dashboard can calculate straight-line distance to a saved pickup stop after an explicit location request. Location remains on the device. Pickup arrival is an approximation only when fresh suitable GPS and route data are available; proximity is not proof that a bus is approaching or has arrived. Boarding status is not recorded. A secure transport pass and QR verification are not implemented.
+
+## College-published routes and sign-up
+
+The public Routes page transcribes boarding points from the [LIET transport page](https://www.lords.ac.in/transport/bus-routes/) for academic year 2023–24. The college notes routes may change. This list is historical reference information, not active operating data, assigned vehicles, or a current schedule. It is deliberately separate from the illustrative map at `/demo/routes` and from the administrator-managed database. Confirm current routes and times with the transport office.
+
+Anyone can request an account on the sign-in page. Email confirmation follows the Supabase project settings; a trusted admin must still link the account to a student or driver record before portal access. Sign-up never assigns privileged roles. Production SMTP must be configured and tested because the default Supabase email service is restricted.
