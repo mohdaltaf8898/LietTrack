@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { LayoutGrid, BusFront, Navigation, Route, MapPin, CalendarDays, Bell, UserRound, CircleHelp, LogOut, ChevronDown, ChevronRight, ArrowUpRight, Clock3, Check, Map, ArrowRight, GraduationCap, Info } from 'lucide-react';
+import { LayoutGrid, BusFront, Navigation, Route, MapPin, CalendarDays, Bell, UserRound, CircleHelp, LogOut, ChevronDown, ChevronRight, ArrowUpRight, Clock3, Check, ArrowRight, GraduationCap, Info } from 'lucide-react';
 import { TransitMap } from './TransitMap';
 import { routes, student, notifications } from './data';
 import './dashboard.css';
