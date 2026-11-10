@@ -96,3 +96,11 @@ Approved students can open `/student/schedule` for today, tomorrow and the next 
 ## Production readiness
 
 Vercel uses `npm run build`, `dist`, and an SPA rewrite in `vercel.json`. Set the two public environment variables in Vercel before building. Supabase migrations in `supabase/migrations` must be applied to the intended project, with RLS and RPC access verified. Provision real routes, buses, schedules, accounts and assignments through trusted operators; sample pages are not production records. Configure production SMTP and validate email confirmation and password recovery before rollout. Verify Vercel deployment protection and public access, each role and protected route, GPS on real devices, maps, notifications and schedules, and mobile/desktop browsers. Notifications currently depend on an open admin session for fleet checks; push delivery and persisted schedule deviation alerts are not implemented. Background location depends on browser and device support.
+
+## App installation and feedback
+
+The production build registers `service-worker.js`, which caches only a generic offline document. Authenticated pages, API responses and map tiles are not cached. Browsers supporting the install prompt will offer an Install button; on iOS use Safari’s Share → Add to Home Screen. An update prompt appears when a new worker is waiting. Installation, updates and offline behavior still require validation on real devices.
+
+Approved students can submit feedback from the student dashboard; administrators can review and respond from Feedback in the admin navigation. The `transport_feedback` migration is required. Feedback is not an emergency channel. Configure verified office and emergency contact information before relying on assistance features.
+
+The student dashboard can calculate straight-line distance to a saved pickup stop after an explicit location request. Location remains on the device. Pickup arrival is an approximation only when fresh suitable GPS and route data are available; proximity is not proof that a bus is approaching or has arrived. Boarding status is not recorded. A secure transport pass and QR verification are not implemented.
