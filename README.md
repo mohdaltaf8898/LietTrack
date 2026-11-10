@@ -49,7 +49,7 @@ Actual bus assignments, routes, schedules, live tracking, arrival predictions an
 
 ## Run locally
 
-Run `npm ci`, copy `.env.example` to `.env.local`, and fill in the Supabase project URL and browser-safe publishable (or legacy anon) key. Run `npm run dev`; use `npm run lint`, `npm test`, and `npm run build` for checks. Builds require the two environment variables. Never put a Supabase secret or service-role key in Vite variables. The map uses OpenStreetMap data and CARTO tiles, which require network access. Public tracking and route views contain illustrative data only.
+Run `npm ci`, copy `.env.example` to `.env.local`, and fill in the Supabase project URL and browser-safe publishable (or legacy anon) key. Run `npm run dev`; use `npm run lint`, `npm test`, and `npm run build` for checks. Builds require the two environment variables. Never put a Supabase secret or service-role key in Vite variables. The map uses OpenStreetMap standard tiles, which require network access. The public tile service has a usage policy and limited capacity; use a suitable tile provider for sustained production traffic. Public tracking and route views contain illustrative data only.
 
 The tracking page at `/tracking` uses sample buses and routes from `src/data.js`. The `campus` coordinate there is an editable illustrative destination, not a verified LIET location. The map can follow a selected bus when its coordinates change, but no GPS feed or automatic simulated movement is connected.
 
